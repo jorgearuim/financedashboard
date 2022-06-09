@@ -22,9 +22,8 @@ final_table = table.melt(id_vars=["Date"],
 columns_bar = {'Savings', 'Equity - Cash' , 'Equity' , 'Holidays'}
 
 
-fig = px.bar(final_table[final_table['category'].isin(columns_bar)], x='Date', y='amount', color = 'category',category_orders  = columns_bar)
+fig = px.bar(final_table[final_table['category'].isin(columns_bar)], x='Date', y='amount', color = 'category')
 fig.update_layout(paper_bgcolor="white")
-fig.show()
 
 
-print(final_table)
+
